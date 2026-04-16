@@ -10,6 +10,25 @@
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card h-100 border-0 shadow-sm">
 
+                            <h5 t-esc="prop.name"/>
+
+                                        
+                                        <t t-if="request.env.user.has_group('base.group_portal')">
+                                            <a t-att-href="'/estate/bid/%s' % prop.id" class="btn btn-primary">
+                                                Bid
+                                            </a>
+                                        </t>
+
+                                        <t t-else="">
+
+                                            
+                                            <a t-att-href="'/estate/contact/%s' % prop.id" class="btn btn-secondary">
+                                                Contact
+                                            </a>
+
+                                        </t>
+
+
                                 
                                 <t t-if="prop.image">
                                     <img class="card-img-top img-fluid"

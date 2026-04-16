@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="contact_form_template">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+
+                <h3>Welcome to our page</h3>
+
+                
+                <p><strong>Property:</strong> <t t-esc="property.name"/></p>
+
+                <form action="/estate/contact/submit" method="post">
+
+                    
+                    <input type="hidden" name="property_id"
+                        t-att-value="property.id"/>
+
+                    <button type="submit" class="btn btn-success">
+                        Submit 
+                    </button>
+
+                </form>
+
+            </div>
+        </t>
+    </template>
+</odoo>
