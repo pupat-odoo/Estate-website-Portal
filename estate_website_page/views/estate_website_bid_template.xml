@@ -16,9 +16,17 @@
                     <input type="hidden" name="property_id"
                         t-att-value="property.id"/>
 
+                    <img t-att-src="'/web/image/estate.property/%s/image' % property.id"
+                        class="img-fluid"
+                        style="height:200px; object-fit:cover;"/>
+
+                    <br></br>
+
                     
                     <div class="mb-3">
-                        <input type="number" name="amount"
+
+                        <p><strong>Enter Bid </strong></p>
+                        <input type="number" name="amount" String="Amount"
                             class="form-control"
                             placeholder="Enter your bid"
                             required="required"/>

@@ -7,5 +7,4 @@ class EstateWebsiteBid(models.Model):
     
     property_id=fields.Many2one("estate.property", string="property")
     price=fields.Float(string="Amount")
-    email_id=fields.Many2one("estate.property", string="Email")
     

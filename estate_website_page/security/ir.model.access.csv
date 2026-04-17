@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_estate_website_bid_portal,estate.website.bid.portal,model_estate_website_bid,base.group_portal,1,1,1,0
-access_estate_website_bid_public,estate.website.bid.public,model_estate_website_bid,base.group_public,1,0,0,0
+access_estate_website_bid_public,estate.website.bid.public,model_estate_website_bid,base.group_public,1,1,1,
+access_estate_website_bid_user,estate.website.bid.user,model_estate_website_bid,base.group_user,1,1,1,1
+access_estate_website_contact_portal,estate.website.contact.portal,model_estate_website_contact,base.group_portal,1,1,1,0
+access_estate_website_contact_public,estate.website.contact.public,model_estate_website_contact,base.group_public,1,1,1,1
+access_estate_website_contact_user,estate.website.contact.user,model_estate_website_contact,base.group_user,1,1,1,1

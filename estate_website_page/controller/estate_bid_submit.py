@@ -10,8 +10,7 @@ class EstateBidController(http.Controller):
         request.env['estate.property.offer'].create({
             'price': float(post.__getitem__('amount')),
             'property_id': int(post.__getitem__('property_id')),
-            'partner_id': request.env.user.partner_id.id
+            'partner_id': request.env.user.partner_id.id,
         })
 
         return request.redirect('/estate')
-        

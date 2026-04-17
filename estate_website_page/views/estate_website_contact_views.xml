@@ -10,11 +10,11 @@
         <field name="name">estate.website.contact.form</field>
         <field name="model">estate.website.contact</field>
         <field name="arch" type="xml">
-                    <form string="Estate Bid ">
+                    <form string="Estate Contact">
                         <sheet>
                             <group>
                                 <field name="property_id"/>
-                                <field name="email"/>            
+                                <field name="email_from"/>            
                             </group>
                         </sheet>
                     </form>
