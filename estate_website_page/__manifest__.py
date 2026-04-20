@@ -13,6 +13,8 @@
         "views/estate_website_bid_views.xml",
         "views/estate_website_contact_views.xml",
         "views/estate_website_contact_template.xml",
+        "views/snippets/s_property_snippet.xml",
+        "views/snippets/snippets.xml",
 
         
     ],
