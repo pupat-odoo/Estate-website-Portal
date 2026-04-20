@@ -13,6 +13,8 @@
                     <form string="Estate Bid ">
                         <sheet>
                             <group>
+                                <field name="name"></field>
+                                <field name="email"></field>
                                 <field name="property_id"/>
                                 <field name="price"/>           
                             </group>

@@ -11,11 +11,14 @@ class EstateContactController(http.Controller):
 
         request.env['crm.lead'].sudo().create({
 
-            'name': Char(post.__getitem__('name')),
-            'email_from': Char(post.__getitem__('email_from')),
+            'name': post.get('name'),
+            'email_from': post.get('email_from'),
+        })
 
-            
-            
+        request.env['estate.website.contact'].sudo().create({
+            'property_id' : post.get('property_id'),
+            'name': post.get('name'),
+            'email_from': post.get('email_from'),
         })
 
         return request.redirect('/estate')

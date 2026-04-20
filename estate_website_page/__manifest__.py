@@ -12,11 +12,12 @@
         "views/estate_website_bid_template.xml",
         "views/estate_website_bid_views.xml",
         "views/estate_website_contact_views.xml",
-        "views/estate_website_contact_template.xml"
+        "views/estate_website_contact_template.xml",
 
         
     ],
     "installation":True,
+    "application" :True,
     "author": "odoo-pupat",
     "license": "LGPL-3",
 }

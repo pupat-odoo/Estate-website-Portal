@@ -6,4 +6,5 @@ class EstateWebsiteContact(models.Model):
     _description='Estate Website contact Model'
 
     property_id=fields.Many2one("estate.property", string="property")
+    name = fields.Char(string="Name")
     email_from=fields.Char(String="Email" , PlaceHolder="enter your email")

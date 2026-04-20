@@ -6,17 +6,6 @@
             <field name="sequence" type="int">20</field>
     </record>
 
-    <!-- <record id="view_property_form_inherit_email" model="ir.ui.view">
-        <field name="name">estate.property.form.email</field>
-        <field name="model">estate.property</field>
-        <field name="inherit_id" ref="estate.estate_property_view_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//group" position="inside">
-                <field name="email_id"/>
-            </xpath>
-        </field>
-    </record> -->
-
     <record id="view_property_form_inherit_image" model="ir.ui.view">
         <field name="name">estate.property.form.image</field>
         <field name="model">estate.property</field>
