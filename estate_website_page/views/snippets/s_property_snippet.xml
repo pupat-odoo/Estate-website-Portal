@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_property_snippet" "name="Property Snippet">
+        <section class="s_property_snippet">
+
+        </section>
+    </template>
+</odoo>

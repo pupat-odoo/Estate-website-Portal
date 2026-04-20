@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippets" inherit_id="website.snippets" name="Snippets">
+
+    <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+        <t snippet-group="property"
+            t-snippet="website.s_snippet_group"
+            string="Property"
+            t-thumbnail="website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_11.jpg"/>
+    </xpath>
+        
+    <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+        <t t-snippet="estate_website_page.s_property_snippet" 
+        string="Custom snippet"
+        keywords="snippets,property"
+        />
+        
+    </xpath>
+    </template>
+
+</odoo>
