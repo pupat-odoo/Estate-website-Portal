@@ -4,20 +4,29 @@
     <template id="snippets" inherit_id="website.snippets" name="Snippets">
 
         <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
-            <t t-snippet="website.s_snippet_group"
-                string="Property"
-                group="property"
-                t-thumbnail="website/static/src/img/snippets_demo/s_mega_menu_thumbnails_default_image_11.jpg"/>
+                <t t-snippet="website.s_snippet_group"
+                    string="Property"
+                    snippet-group="property"
+                    t-thumbnail="/estate_website_page/static/src/img/wbuilder/property_rating.png"/>
         </xpath>
-        
-    <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
-        <t t-snippet="estate_website_page.s_property_snippet" 
-        group="property"
-        string="Custom snippet"
-        keywords="snippets,property"
-        />
-        
-    </xpath>
-    </template>
+            
+        <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+            <t t-snippet="estate_website_page.s_property_snippet" 
+            snippet-group="property"
+            string="Property snippet"
+            keywords="property,snippet"/>
+            
+            
+        </xpath>
 
+        <xpath expr="//snippets[@id='snippet_content']/*[1]" position="before">
+            <t t-snippet="estate_website_page.s_property_snippet" 
+            snippet-group="property"
+            string="Custom snippet"
+            t-thumbnail="/estate_website_page/static/src/img/wbuilder/property_rating.png"
+            keywords="property,snippet"/>
+            
+            
+        </xpath>
+    </template>
 </odoo>

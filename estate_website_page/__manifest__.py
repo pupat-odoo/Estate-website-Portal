@@ -15,9 +15,15 @@
         "views/estate_website_contact_template.xml",
         "views/snippets/s_property_snippet.xml",
         "views/snippets/snippets.xml",
-
         
     ],
+
+    'estate_website_page.website_builder_assets': [
+            ('include', 'website_builder.assets'),
+            'estate_website_page/static/src/website_builder/**/*',
+            ('remove', 'estate_website_page/static/src/website_builder/**/*.edit.*'),
+        ],
+
     "installation":True,
     "application" :True,
     "author": "odoo-pupat",

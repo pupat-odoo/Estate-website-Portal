@@ -3,7 +3,29 @@
 
     <template id="s_property_snippet" name="Property Snippet">
         <section class="s_property_snippet">
-
+            <div t-attf-id="myproperty  " data-bs-ride="true" data-bs-interval="10000">
+                <div class="property-inner">
+                    <div class="myproperty " data-name="Slide">
+                        <div class="container">
+                            <div class="row o_grid_mode" data-row-count="8">
+                                <div class="o_grid_item g-height-8 g-col-lg-5 col-lg-5" style="z-index: 1; grid-area: 1 / 1 / 9 / 6;" data-name="Block">
+                                    <h1 class="display-3-fs">Share your review</h1>
+                                </div>
+                                <div>
+                                    <textarea row="5" cols="30" name="review" placeholder="Your reviews"/>
+                                    <p class="lead">Thanks for visiting</p>
+                                    
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </template>
 </odoo>
