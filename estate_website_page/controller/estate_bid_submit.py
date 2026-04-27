@@ -1,4 +1,5 @@
 from odoo import http
+from odoo.fields import Char
 from odoo.http import request
 
 
@@ -9,16 +10,17 @@ class EstateBidController(http.Controller):
 
         request.env['estate.property.offer'].create({
 
-            'price': float(post.__getitem__('amount')),
-            'property_id': int(post.__getitem__('property_id')),
-            'partner_id': request.env.user.partner_id.id,
+            
+            'price' : float(post.__getitem__('amount')),
+            'property_id' : int(post.__getitem__('property_id')),
+            'partner_id' : request.env.user.partner_id.id,
         })
 
         request.env['estate.website.bid'].create({
 
-            'price': post.get('amount'),
-            'property_id': int(post.__getitem__('property_id')),
             
+            'price': post.get('amount'),
+            'property_id': post.get('property_id')
         })
         
         return request.redirect('/estate')

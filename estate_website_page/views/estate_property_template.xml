@@ -54,11 +54,6 @@
                     </t>
                 </div>
 
-                
-                <!-- <div class="text-center">
-                    <t t-call="website.pager"/>
-                </div> -->
-
             </div>
         </t>
     </template>

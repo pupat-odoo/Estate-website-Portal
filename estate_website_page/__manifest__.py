@@ -6,6 +6,7 @@
     "summary": "This module is for Real estate advertisement website.",
     "category": "estate_website",
     "data": [
+        "views/estate_menus.xml",
         "security/ir.model.access.csv",
         "views/estate_website_views.xml",
         "views/estate_property_template.xml",
@@ -18,12 +19,13 @@
         
     ],
 
-    'estate_website_page.website_builder_assets': [
-            ('include', 'website_builder.assets'),
-            'estate_website_page/static/src/website_builder/**/*',
-            ('remove', 'estate_website_page/static/src/website_builder/**/*.edit.*'),
-        ],
+    'assets': {
+    'website.website_builder_assets': [
 
+        'estate_website_page/static/src/website_builder/property_snippet_option_plugin.js',
+        'estate_website_page/static/src/website_builder/property_snippet_option.xml',
+    ],
+},
     "installation":True,
     "application" :True,
     "author": "odoo-pupat",

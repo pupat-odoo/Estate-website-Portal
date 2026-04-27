@@ -15,10 +15,4 @@ class EstateContactController(http.Controller):
             'email_from': post.get('email_from'),
         })
 
-        request.env['estate.website.contact'].sudo().create({
-            'property_id' : post.get('property_id'),
-            'name': post.get('name'),
-            'email_from': post.get('email_from'),
-        })
-
         return request.redirect('/estate')

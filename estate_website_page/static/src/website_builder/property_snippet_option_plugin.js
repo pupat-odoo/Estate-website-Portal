@@ -4,8 +4,8 @@ import { registry } from "@web/core/registry";
 
 export class PropertySnippetOption extends BaseOptionComponent {
     static template = "estate_website_page.PropertySnippetOption";
-    static selector = ".s_property_snippet";
-    static applyTo = ":scope > .row";
+    static selector = "section.s_property_snippet";
+    static applyTo = ":scope  .row";
 }
 
 

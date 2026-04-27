@@ -1,11 +1,10 @@
-from logging import PlaceHolder
 from odoo import  fields, models
 
 class EstateWebsite(models.Model):
     _inherit = 'estate.property'
 
     
-    image = fields.Image(String="Add Image")
+    image = fields.Image(string="Add Image")
     email_from = fields.Char(string="Email")
     
     bid_ids = fields.One2many(
