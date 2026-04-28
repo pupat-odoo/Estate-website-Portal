@@ -2,23 +2,20 @@
 
 
         <record id="action_estate_bid" model="ir.actions.act_window">
-        <field name="name">Bids</field>
-        <field name="res_model">estate.website.bid</field>
-        <field name="view_mode">list,form</field>
+                <field name="name">Bids</field>
+                <field name="res_model">estate.website.bid</field>
+                <field name="view_mode">list,form</field>
         </record>
-
         <menuitem id="estate_menu_root" name="Estate Website"/>
         <menuitem id="estate_menu_bid"
                 name="Bids"
                 parent="estate_menu_root"
                 action="action_estate_bid"/>
-
         <record id="action_estate_contact" model="ir.actions.act_window">
-        <field name="name">Contact</field>
-        <field name="res_model">estate.website.contact</field>
-        <field name="view_mode">list,form</field>
+                <field name="name">Contact</field>
+                <field name="res_model">estate.website.contact</field>
+                <field name="view_mode">list,form</field>
         </record>
-
         <menuitem id="estate_menu_root" name="Estate Website"/>
         <menuitem id="estate_menu_contact"
                 name="Contact"

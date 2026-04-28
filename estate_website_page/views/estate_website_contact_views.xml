@@ -10,23 +10,21 @@
         <field name="name">estate.website.contact.form</field>
         <field name="model">estate.website.contact</field>
         <field name="arch" type="xml">
-                    <form string="Estate Contact">
-                        <sheet>
-                            <group>
-                                <field name="property_id"/>
-                                <field name="name"></field>
-                                <field name="email_from"/>            
-                            </group>
-                        </sheet>
-                    </form>
+                <form string="Estate Contact">
+                    <sheet>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="name"></field>
+                            <field name="email_from"/>            
+                        </group>
+                    </sheet>
+                </form>
         </field>
     </record>
-
     <record id="estate_website_contact_view_list" model="ir.ui.view">
         <field name="name">estate.website.contact.list</field>
         <field name="model">estate.website.contact</field>
         <field name="arch" type="xml">
-
             <list string="Estate Contact">
                 <field name="property_id"/>
                 <field name="email_from"/> 

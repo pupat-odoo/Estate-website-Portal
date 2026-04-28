@@ -8,7 +8,6 @@ export class PropertySnippetOption extends BaseOptionComponent {
     static applyTo = ":scope  .row";
 }
 
-
 export class PropertySnippetOptionPlugin extends Plugin{
     static id ="propertySnippetOption";
     resources = {

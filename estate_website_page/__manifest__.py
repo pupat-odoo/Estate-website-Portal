@@ -15,8 +15,8 @@
         "views/estate_website_contact_views.xml",
         "views/estate_website_contact_template.xml",
         "views/snippets/s_property_snippet.xml",
-        "views/snippets/snippets.xml",
-        
+        "views/snippets/snippets.xml", 
+        "views/snippets/s_property_load_snippet.xml",
     ],
 
     'assets': {
@@ -24,8 +24,8 @@
 
         'estate_website_page/static/src/website_builder/property_snippet_option_plugin.js',
         'estate_website_page/static/src/website_builder/property_snippet_option.xml',
-    ],
-},
+        ],
+    },
     "installation":True,
     "application" :True,
     "author": "odoo-pupat",

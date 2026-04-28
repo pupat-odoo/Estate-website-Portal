@@ -13,7 +13,6 @@
                                 </div>
                                 <div>
                                     <textarea class="property-snippet" row="3"   name="review" placeholder="Your reviews"></textarea>
-                                
                                     <p>Thanks for visiting</p>
                                     
                                         <span class="fa fa-star checked"></span>

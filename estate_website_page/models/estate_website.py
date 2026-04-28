@@ -6,13 +6,11 @@ class EstateWebsite(models.Model):
     
     image = fields.Image(string="Add Image")
     email_from = fields.Char(string="Email")
-    
     bid_ids = fields.One2many(
         'estate.website.bid',
         'property_id',
         string="Bids"
     ),
-
     contact_ids = fields.One2many(
         'estate.website.contact',
         'property_id',

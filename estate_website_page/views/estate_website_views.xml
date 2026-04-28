@@ -5,7 +5,6 @@
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">20</field>
     </record>
-
     <record id="view_property_form_inherit_image" model="ir.ui.view">
         <field name="name">estate.property.form.image</field>
         <field name="model">estate.property</field>
