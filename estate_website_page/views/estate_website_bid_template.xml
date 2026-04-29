@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="bid_form_template">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h3>Place Bid</h3>
+                <p><strong>Property:</strong> <t t-esc="property.name"/></p>
+
+                <form action="/estate/bid/submit" method="post">
+                    <input type="hidden" name="property_id"
+                        t-att-value="property.id"/>
+                    <img t-att-src="'/web/image/estate.property/%s/image' % property.id"
+                        class="img-fluid"
+                        style="height:200px; object-fit:cover;"/>
+                    <br></br>
+                    <div class="mb-3">
+                        <p><strong>Enter Bid </strong></p>
+                        <input type="number" name="amount" String="Amount"
+                            class="form-control"
+                            placeholder="Enter your bid"
+                            required="required"/>
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        Submit Bid
+                    </button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

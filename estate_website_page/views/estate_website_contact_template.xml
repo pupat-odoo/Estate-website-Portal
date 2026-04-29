@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="contact_form_template">
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h3>Welcome to our page</h3>
+                <p><strong>Property:</strong> <t t-esc="property.name"/></p>
+                
+                <form action="/estate/contact/submit" method="post">
+                    <input type="hidden" name="property_id"
+                        t-att-value="property.id"/>
+                    <img t-att-src="'/web/image/estate.property/%s/image' % property.id"
+                        class="img-fluid"
+                        style="height:200px; object-fit:cover;"/>
+                    <p><strong>Enter your name</strong></p>
+                    <div class="mb-3">
+                        <input type="name" name="name"
+                            class="form-control"
+                            placeholder="Enter your name"
+                            required="required"/>
+                        <p><strong>Enter your email</strong></p>
+                        <input type="email" name="email_from"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required="required"/>
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        Submit 
+                    </button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

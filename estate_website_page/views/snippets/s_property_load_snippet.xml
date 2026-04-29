@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_property_load_snippet" name="Columns">
+        <section class="s_property_load_snippet o_cc o_cc2 pt32 pb32 o_colored_level" data-vxml="001" data-vcss="001">
+            <div class="container">
+                <div class="row d-flex align-items-stretch">
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/home1.jpg" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">Chitrakut Residency</h2>
+                                <p class="card-text">Best for family , live a luxiuious life</p>
+                                <p class="card-nuber">900000</p>
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/1" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/palace1.webp" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">Rooftop House</h2>
+                                <p class="card-text">Best for family , live a luxiuious life</p>
+                                <p class="card-number">950000</p>
+                                
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/2" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/home2.jpeg" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">Swadesh Pg</h2>
+                                <p class="card-text">Fully funished 3bhk flat.</p>
+                                <p class="card-number">10000000</p>
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/3" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/palace3.jpeg" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">Suryoday Penthouse</h2>
+                                <p class="card-text">Available for students and professionals.</p>
+                                <p class="card-number">50000</p>
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/penthouse1.jpg" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">De glance Palace</h2>
+                                <p class="card-text">Your lifetime settlement is here</p>
+                                <p class="card-number">15000000</p>
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/4" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-name="Card" class="col-lg-4 pt16 pb16">
+                        <div class="s_card o_card_img_top card h-100 o_cc o_cc1 my-0" data-vxml="001" data-snippet="s_card" data-name="Card">
+                            <figure class="o_card_img_wrapper ratio ratio-16x9 mb-0">
+                                <img class="o_card_img card-img-top" src="/estate_website_page/static/src/img/wbuilder/penthouse2.jpg" alt=""/>
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title h5-fs">Friendship house</h2>
+                                <p class="card-text">Best for family , live a luxiuious life</p>
+                                <p class="card-number">30000</p>
+                            </div>
+                            <div class="mb-0 py-2 col-12 s_bid_property  text-end" data-name="Bid Button">
+                                <div style="width: 200px;" class="s_bid_property">
+                                    <a href="/estate/bid/" role="button" class="btn btn-primary s_bid_property">Bid</a>
+                                    <span id="s_property_bid_result"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

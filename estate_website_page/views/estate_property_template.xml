@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="properties_listing" name="Properties Listing">
+        <t t-call="website.layout">
+            <div id="wrap" class="container py-4">
+                <h1>Properties</h1>
+                <div class="row">
+                    <t t-foreach="properties" t-as="prop">
+                        <div class="col-12 col-md-3 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <h5 t-esc="prop.name"/>
+                                <t t-if="prop.image">
+                                    <img class="card-img-top img-fluid"
+                                        t-att-src="'/web/image/estate.property/' + str(prop.id) + '/image'"
+                                        style="height:200px; object-fit:cover;"/>
+                                </t>
+                                <t t-else="">
+                                    <div class="bg-dark d-flex align-items-center justify-content-center" style="height:200px;">
+                                        <i class="fa fa-home text-white fa-3x"/>
+                                    </div>
+                                </t>
+                                <div class="card-body">
+                                    <h5 class="fw-bold" t-out="prop.name"/>
+                                    <p class="text-muted small"
+                                    t-if="prop.description"
+                                    t-out="prop.description"/>
+                                    <p class="text-muted small"
+                                    t-if="prop.expected_price"
+                                    t-out="prop.expected_price"/> 
+                                </div>
+                                <t t-if="not request.env.user._is_public()">
+                                    <a t-att-href="'/estate/bid/%s' % prop.id" class="btn btn-primary">
+                                        Bid
+                                    </a>
+                                </t>
+                                <t t-else="">  
+                                    <a t-att-href="'/estate/contact/%s' % prop.id" class="btn btn-secondary">
+                                        Contact
+                                    </a>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>
