@@ -8,32 +8,41 @@
         <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
                 <t t-snippet="website.s_snippet_group"
                     string="Property"
-                    snippet-group="property"
+                    group="property"
                     t-thumbnail="/estate_website_page/static/src/img/wbuilder/property_rating.png"/>
         </xpath>
     
         <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
             <t t-snippet="estate_website_page.s_property_snippet" 
-            snippet-group="property"
-            string="Property snippet"
-            keywords="property,snippet"/>   
+                group="property"
+                string="Property snippet"
+                keywords="property,snippet"/>   
         </xpath>
 
         <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t t-snippet="estate_website_page.s_property_load_snippet" 
-                string="Demo Property"
-                group="columns"
-                t-thumbnail="/estate_website_page/static/src/img/wbuilder/Property_column.jpeg">
+                    string="Demo Property"
+                    group="columns"
+                    t-thumbnail="/estate_website_page/static/src/img/wbuilder/Property_column.jpeg">
+                <keywords>property,snippet</keywords>
+            </t>
+        </xpath>
+
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="estate_website_page.s_property_listing_snippet" 
+                    string=" My Property"
+                    group="columns"
+                    t-thumbnail="/estate_website_page/static/src/img/wbuilder/Property_column.jpeg">
                 <keywords>property,snippet</keywords>
             </t>
         </xpath>
 
         <xpath expr="//snippets[@id='snippet_content']/*[1]" position="before">
             <t t-snippet="estate_website_page.s_property_snippet" 
-            snippet-group="property"
-            string="Custom snippet"
-            t-thumbnail="/estate_website_page/static/src/img/wbuilder/property_rating.png"
-            keywords="property,snippet"/>    
+                group="property"
+                string="Custom snippet"
+                t-thumbnail="/estate_website_page/static/src/img/wbuilder/property_rating.png"
+                keywords="property,snippet"/>    
         </xpath>
     </template>
 </odoo>
