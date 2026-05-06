@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <templates xml:space="preserve">
+        <t t-name="estate_website_page.s_property_listing_snippet">    
+            <section class="s_property_listing_snippet py-4">
+                <div class="container">
+                    <h3>Available Properties</h3>
+                    <div class="row">
+                        <p>Properties</p>
+                            <t t-foreach="properties" t-as="prop" t-key="prop.id">
+                                <div class="col-12 col-md-3 mb-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img class="card-img-top img-fluid"
+                                            t-att-src="'/web/image/estate.property/' + prop.id + '/image'"
+                                            style="height:200px; object-fit:cover;"/>
+                                        <div class="card-body">
+                                            <h5 class="fw-bold" t-out="prop.name"/>
+                                            <p class="text-muted small" t-out="prop.description"/>
+                                            <p class="text-muted small" t-out="prop.expected_price"/>
+                                        </div>
+                                        <a t-att-href="'/estate/bid/' + prop.id"
+                                        class="btn btn-primary">
+                                            Bid
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+            </section>
+        </t>
+    </templates>

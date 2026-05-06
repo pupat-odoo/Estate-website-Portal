@@ -12,7 +12,7 @@
                                     <h1 class="display-3-fs">Share your review</h1>
                                 </div>
                                 <div>
-                                    <textarea class="property-snippet" row="3"   name="review" placeholder="Your reviews"></textarea>
+                                    <textarea class="property-snippet" id="property_snip" row="3"   name="review" placeholder="Your reviews"></textarea>
                                     <p>Thanks for visiting</p>
                                     
                                         <span class="fa fa-star checked"></span>
