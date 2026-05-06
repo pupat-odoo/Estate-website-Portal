@@ -6,21 +6,15 @@ export class PropertyListingSnippet extends Interaction {
 
     setup() {
         this.properties = [];
-    }
+        }
 
     async willStart() {
-        const data = await this.services.orm.call("estate.property", "properties_listing");
-        console.log("Property data:", data);
-
-        this.properties = data.properties || [];
+        const data = await this.services.orm.searchRead("estate.property", [], ["name", "expected_price", "description"]);
+        this.properties = data || [];
     }
 
-    start() {
+    start() { 
         const container = this.el.querySelector(".property_container");
-
-        console.log("Container:", container);
-        console.log("Property data:", this.properties);
-
         if (!container) {
             console.error("property_container not found");
             return;
