@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <template id="s_property_listing_snippet" name="Property Listing">
+            <section class="s_property_listing_snippet">
+                <div class="container">
+                    <h2>Properties</h2>
+                    <div class="property_container"></div>
+                </div>
+            </section>
+    </template>
     
-    
-
     <template id="snippets" inherit_id="website.snippets" name="Snippets">
 
         <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
@@ -27,6 +33,8 @@
                 <keywords>property,snippet</keywords>
             </t>
         </xpath>
+
+        
 
         <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t t-snippet="estate_website_page.s_property_listing_snippet" 
