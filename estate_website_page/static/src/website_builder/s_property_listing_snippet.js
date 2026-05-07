@@ -9,7 +9,7 @@ export class PropertyListingSnippet extends Interaction {
         }
 
     async willStart() {
-        const data = await this.services.orm.searchRead("estate.property", [], ["name", "expected_price", "description"]);
+        const data = await this.services.orm.searchRead("estate.property", [], ["name", "property_type_id", "expected_price", "description"]);
         this.properties = data || [];
     }
 
@@ -34,3 +34,7 @@ registry.category("public.interactions").add(
     "estate_website_page.s_property_listing_snippet",
     PropertyListingSnippet
 );
+registry.category("public.interactions.edit").add("estate_website_page.s_property_listing_snippet", 
+    {
+        Interaction: PropertyListingSnippet,
+    });

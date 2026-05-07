@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="estate_website_page.PropertyListingSnippetOption"
+        data-selector=".s_property_listing_snippet">
+
+        <BuilderRow label.translate="Select View">
+            <BuilderButtonGroup>
+                <BuilderButton actionParam="{views: ['estate_website_page.s_property_listing_snippet']}">List</BuilderButton>
+                <BuilderButton>Card</BuilderButton>
+            </BuilderButtonGroup>
+        </BuilderRow>
+
+        <BuilderRow label.translate="Property Type">
+            <BuilderSelect getValue="property_type_id">
+                <BuilderSelectItem>Home</BuilderSelectItem>
+                <BuilderSelectItem classAction="'text-center'">Palace</BuilderSelectItem>
+                <BuilderSelectItem>Villa</BuilderSelectItem>
+                <BuilderSelectItem>Penthouse</BuilderSelectItem>
+            </BuilderSelect>
+        </BuilderRow>
+
+        <BuilderRow label.translate="Colors">
+            <BuilderColorPicker applyTo="'.property-snippet'" styleAction="'background-color'" enabledTabs="['solid', 'custom']"/>
+        </BuilderRow> 
+    </t>
+</templates>
