@@ -21,14 +21,14 @@
         'assets': {
         'web.assets_frontend': [
             'estate_website_page/static/src/website_builder/s_property_listing_snippet.js',
-            'estate_website_page/static/src/website_builder/s_property_listing_snippet.xml',          
+            'estate_website_page/static/src/website_builder/s_property_listing_snippet.xml',
         ],
         'website.website_builder_assets': [
             'estate_website_page/static/src/website_builder/property_snippet_option_plugin.js',
             'estate_website_page/static/src/website_builder/property_snippet_option.xml',
-            'estate_website_page/static/src/website_builder/property_snippet_option.xml',
             'estate_website_page/static/src/website_builder/property_listing_snippet_option_plugin.js',
             'estate_website_page/static/src/website_builder/property_listing_snippet_option.xml',
+            'estate_website_page/static/src/css/property_listing_snippet.css'
         ],
         'web.assets_backend': [
             'web/static/src/core/network',
