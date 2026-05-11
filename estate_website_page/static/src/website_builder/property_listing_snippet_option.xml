@@ -2,16 +2,18 @@
 <templates xml:space="preserve">
     <t t-name="estate_website_page.PropertyListingSnippetOption"
         data-selector=".s_property_listing_snippet">
-        <BuilderRow label.translate="Property Type">
-            <BuilderButton classAction="'propertyListingSnippetOption'" mainParam="'card'">Card</BuilderButton>
-            <BuilderButton classAction="'propertyListingSnippetOption'" mainParam="'list'">List</BuilderButton>
+        <BuilderRow label.translate="Layout">
+            <BuilderButtonGroup action="'propertyLayout'"> 
+                <BuilderButton  actionParam="'card'">Card</BuilderButton>
+                <BuilderButton  actionParam="'list'">List</BuilderButton>
+            </BuilderButtonGroup>
         </BuilderRow>
         <BuilderRow label.translate="Property Type">
-            <BuilderSelect>
-                <BuilderSelectItem classAction="'propertyListingSnippetOption'" mainParam="'Home'">Home</BuilderSelectItem>
-                <BuilderSelectItem classAction="'propertyListingSnippetOption'"  mainParam="'Palace'">Palace</BuilderSelectItem>
-                <BuilderSelectItem classAction="'propertyListingSnippetOption'" mainParam="'Villa'">Villa</BuilderSelectItem>
-                <BuilderSelectItem classAction="'propertyListingSnippetOption'"  mainParam="'Penthouse'">Penthouse</BuilderSelectItem>
+            <BuilderSelect action="'propertyType'">
+                <BuilderSelectItem actionParam="'1'">Home</BuilderSelectItem>
+                <BuilderSelectItem actionParam="'4'">Palace</BuilderSelectItem>
+                <BuilderSelectItem actionParam="'2'">Villa</BuilderSelectItem>
+                <BuilderSelectItem actionParam="'3'">Penthouse</BuilderSelectItem>
             </BuilderSelect>
         </BuilderRow>
         <BuilderRow label.translate="Colors">

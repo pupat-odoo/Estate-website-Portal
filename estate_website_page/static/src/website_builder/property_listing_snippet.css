@@ -1,20 +1,24 @@
-.s_property_listing_snippet .list-view-layout {
+.s_property_listing_snippet .container.is-list-view .property_container > .card-view-layout {
     display: none !important;
 }
 
-
-.s_property_listing_snippet.is-list-view .list-view-layout {
+.s_property_listing_snippet .container.is-list-view .property_container > .list-view-layout {
     display: block !important;
 }
-.s_property_listing_snippet.is-list-view .card-view-layout {
+
+.s_property_listing_snippet .container.is-card-view .property_container > .card-view-layout {
+    display: block !important;
+}
+
+.s_property_listing_snippet .container.is-card-view .property_container > .list-view-layout {
     display: none !important;
 }
 
 
-.s_property_listing_snippet.is-list-view .list-group-item {
-    margin-bottom: 20px; 
+.s_property_listing_snippet .property_container > .list-view-layout {
+    display: none !important;
 }
 
-.s_property_listing_snippet.is-list-view .gap-2 {
-    gap: 1.5rem !important; 
+.s_property_listing_snippet .property_container > .card-view-layout {
+    display: block !important;
 }

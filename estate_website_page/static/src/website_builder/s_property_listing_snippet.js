@@ -7,10 +7,26 @@ export class PropertyListingSnippet extends Interaction {
     setup() {
         this.properties = [];
         }
-
+        
     async willStart() {
-        const data = await this.services.orm.searchRead("estate.property", [], ["name", "property_type_id", "expected_price", "description"]);
-        this.properties = data || [];
+        await this.loadProperties();
+        this.el.addEventListener("property_type_changed", async () => {
+            await this.loadProperties();
+        });
+    }
+
+    async loadProperties() {
+        const propertyTypeId = this.el.dataset.propertyTypeId;
+        
+        let domain = [];
+        if (propertyTypeId) {
+            domain.push(["property_type_id", "=", Number(propertyTypeId)]);
+        }
+        this.properties = await this.services.orm.searchRead(
+            "estate.property",
+            domain,
+            ["name", "property_type_id", "expected_price", "description"]
+        );
     }
 
     start() { 
@@ -19,9 +35,8 @@ export class PropertyListingSnippet extends Interaction {
             console.error("property_container not found");
             return;
         }
-
         this.renderAt(
-            "estate_website_page.s_property_listing_snippet",
+            "estate_website_page.property_cards_template",
             {
                 properties: this.properties || [],
             },
