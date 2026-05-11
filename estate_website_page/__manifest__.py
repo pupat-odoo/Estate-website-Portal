@@ -31,9 +31,6 @@
             'estate_website_page/static/src/website_builder/property_listing_snippet_option.xml',
             
         ],
-        'web.assets_backend': [
-            'web/static/src/core/network',
-        ], 
     },
     "installation":True,
     "application" :True,

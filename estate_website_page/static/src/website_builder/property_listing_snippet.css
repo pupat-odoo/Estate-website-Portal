@@ -1,5 +1,6 @@
 .s_property_listing_snippet .container.is-list-view .property_container > .card-view-layout {
-    display: none !important;
+    opacity: 0 !important;
+    position: absolute;   
 }
 
 .s_property_listing_snippet .container.is-list-view .property_container > .list-view-layout {
@@ -11,12 +12,13 @@
 }
 
 .s_property_listing_snippet .container.is-card-view .property_container > .list-view-layout {
-    display: none !important;
+    opacity: 0 !important;
+    position: absolute;  
 }
 
 
 .s_property_listing_snippet .property_container > .list-view-layout {
-    display: none !important;
+    display: block !important;
 }
 
 .s_property_listing_snippet .property_container > .card-view-layout {
