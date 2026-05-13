@@ -7,17 +7,9 @@
                 <BuilderButton  actionParam="'card'">Card</BuilderButton>
                 <BuilderButton  actionParam="'list'">List</BuilderButton>
             </BuilderButtonGroup>
-        </BuilderRow>
+        </BuilderRow>   
         <BuilderRow label.translate="Property Type">
-            <BuilderSelect action="'propertyType'">
-                <BuilderSelectItem actionParam="'1'">Home</BuilderSelectItem>
-                <BuilderSelectItem actionParam="'4'">Palace</BuilderSelectItem>
-                <BuilderSelectItem actionParam="'2'">Villa</BuilderSelectItem>
-                <BuilderSelectItem actionParam="'3'">Penthouse</BuilderSelectItem>
-            </BuilderSelect>
+            <BuilderMany2One action="'propertyType'" model="'estate.property'" domain="[['property_type_id', '=', 'propertTypeId' ]]"/>
         </BuilderRow>
-        <BuilderRow label.translate="Colors">
-            <BuilderColorPicker applyTo="'.property-snippet'" styleAction="'background-color'" enabledTabs="['solid', 'custom']"/>
-        </BuilderRow> 
     </t>
 </templates>

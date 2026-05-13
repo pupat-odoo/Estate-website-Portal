@@ -24,11 +24,21 @@ export class PropertyLayoutAction extends BuilderAction {
 
 export class PropertyTypeAction extends BuilderAction {
     static id = "propertyType";
-    apply({ editingElement, params: { mainParam } }) {
-        editingElement.dataset.propertyTypeId = mainParam;
-        editingElement.dispatchEvent(
-            new Event("property_type_changed")
-        );
+    getValue({ editingElement }) {
+        const propertyTypeId = editingElement.dataset.propertyTypeId;
+        if (!propertyTypeId) {
+            return undefined;
+        }
+        return propertyTypeId;
+    }
+
+    async apply({ editingElement, value }) {
+        if (value) {
+            editingElement.dataset.propertyTypeId = value;
+        } else {
+            delete editingElement.dataset.propertyTypeId;
+        }
+        editingElement.dispatchEvent(new Event("property_type_changed",));
     }
 
     isApplied({ editingElement, params: { mainParam } }) {
