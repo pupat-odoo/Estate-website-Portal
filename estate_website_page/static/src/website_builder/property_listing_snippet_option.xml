@@ -9,7 +9,7 @@
             </BuilderButtonGroup>
         </BuilderRow>   
         <BuilderRow label.translate="Property Type">
-            <BuilderMany2One action="'propertyType'" model="'estate.property'" domain="[['property_type_id', '=', 'propertTypeId' ]]"/>
+            <BuilderMany2One action="'propertyType'" model="'estate.property.type'"/>
         </BuilderRow>
     </t>
 </templates>

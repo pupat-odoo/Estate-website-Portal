@@ -40,10 +40,6 @@ export class PropertyTypeAction extends BuilderAction {
         }
         editingElement.dispatchEvent(new Event("property_type_changed",));
     }
-
-    isApplied({ editingElement, params: { mainParam } }) {
-        return editingElement.dataset.propertyTypeId === mainParam;
-    }
 }
 
 export class PropertyListingSnippetOptionPlugin extends Plugin {

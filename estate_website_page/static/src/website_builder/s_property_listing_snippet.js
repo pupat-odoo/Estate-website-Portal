@@ -17,10 +17,13 @@ export class PropertyListingSnippet extends Interaction {
 
     async loadProperties() {
         const propertyTypeId = this.el.dataset.propertyTypeId;
-        
-        let domain = [];
+        const domain = [];
         if (propertyTypeId) {
-            domain.push(["property_type_id", "=", Number(propertyTypeId)]);
+            domain.push([
+                "property_type_id",
+                "=",
+                parseInt(JSON.parse(propertyTypeId).id, 10)]
+            );
         }
         this.properties = await this.services.orm.searchRead(
             "estate.property",
