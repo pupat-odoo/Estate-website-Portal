@@ -18,12 +18,18 @@
         "views/snippets/snippets.xml", 
         "views/snippets/s_property_load_snippet.xml",
     ],
-
-    'assets': {
-    'website.website_builder_assets': [
-
-        'estate_website_page/static/src/website_builder/property_snippet_option_plugin.js',
-        'estate_website_page/static/src/website_builder/property_snippet_option.xml',
+        'assets': {
+        'web.assets_frontend': [
+            'estate_website_page/static/src/website_builder/s_property_listing_snippet.js',
+            'estate_website_page/static/src/website_builder/s_property_listing_snippet.xml',
+            'estate_website_page/static/src/website_builder/s_snippet_card_view.xml',
+        ],
+        'website.website_builder_assets': [
+            'estate_website_page/static/src/website_builder/property_snippet_option_plugin.js',
+            'estate_website_page/static/src/website_builder/property_snippet_option.xml',
+            'estate_website_page/static/src/website_builder/property_listing_snippet_option_plugin.js',
+            'estate_website_page/static/src/website_builder/property_listing_snippet_option.xml',
+            
         ],
     },
     "installation":True,

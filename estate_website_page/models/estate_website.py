@@ -1,4 +1,6 @@
-from odoo import  fields, models
+from odoo import  api,fields, models
+from odoo import http
+from odoo.http import request
 
 class EstateWebsite(models.Model):
     _inherit = 'estate.property'
@@ -16,3 +18,4 @@ class EstateWebsite(models.Model):
         'property_id',
         string="Contact"
     )
+    

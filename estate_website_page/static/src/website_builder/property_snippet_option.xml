@@ -15,8 +15,8 @@
 
         <BuilderRow label.translate="Colors">
             <BuilderColorPicker applyTo="'.property-snippet'" styleAction="'background-color'" enabledTabs="['solid', 'custom']"/>
-        </BuilderRow>
-
+        </BuilderRow> 
+        
         <BuilderRange
             action="'setClassRange'"
             actionParam="['o_spc-none', 'o_spc-small', 'o_spc-medium', 'o_spc-big']"

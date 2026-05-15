@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="estate_website_page.PropertyListingSnippetOption"
+        data-selector=".s_property_listing_snippet">
+        <BuilderRow label.translate="Layout">
+            <BuilderButtonGroup action="'propertyLayout'"> 
+                <BuilderButton  actionParam="'card'">Card</BuilderButton>
+                <BuilderButton  actionParam="'list'">List</BuilderButton>
+            </BuilderButtonGroup>
+        </BuilderRow>   
+        <BuilderRow label.translate="Property Type">
+            <BuilderMany2One action="'propertyType'" model="'estate.property.type'"/>
+        </BuilderRow>
+    </t>
+</templates>
