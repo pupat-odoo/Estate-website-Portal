@@ -12,6 +12,11 @@ export class PropertyListingSnippet extends Interaction {
         await this.loadProperties();
         this.el.addEventListener("property_type_changed", async () => {
             await this.loadProperties();
+            this.renderProperties();
+        });
+        
+        this.el.addEventListener("property_layout_changed",  () => {
+            this.renderProperties();
         });
     }
 
@@ -33,13 +38,22 @@ export class PropertyListingSnippet extends Interaction {
     }
 
     start() { 
+        this.renderProperties();
+    }
+
+    renderProperties() {
         const container = this.el.querySelector(".property_container");
         if (!container) {
-            console.error("property_container not found");
             return;
         }
+        container.innerHTML = "";
+        const layout = this.el.dataset.propertyLayout || "card";
+        const template =
+            layout === "list"
+                ? "estate_website_page.property_cards_template"
+                : "estate_website_page.property_cards_view_template";
         this.renderAt(
-            "estate_website_page.property_cards_template",
+            template,
             {
                 properties: this.properties || [],
             },

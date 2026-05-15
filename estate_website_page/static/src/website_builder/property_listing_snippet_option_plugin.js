@@ -11,14 +11,12 @@ export class PropertyListingSnippetOption extends BaseOptionComponent {
 export class PropertyLayoutAction extends BuilderAction {
     static id = "propertyLayout";
     apply({ editingElement, params: { mainParam } }) {
-        const container = editingElement.querySelector(":scope .container");
-        container.classList.toggle("is-list-view", mainParam === "list");
-        container.classList.toggle("is-card-view", mainParam === "card");
+        editingElement.dataset.propertyLayout = mainParam;
+        editingElement.dispatchEvent(new Event("property_layout_changed" , {'bubbles' : true}));
     }
 
     isApplied({ editingElement, params: { mainParam } }) {
-        const container = editingElement.querySelector(":scope .container");
-        return container.classList.contains(`is-${mainParam}-view`);
+        return editingElement.dataset.propertyLayout == mainParam;
     }
 }
 

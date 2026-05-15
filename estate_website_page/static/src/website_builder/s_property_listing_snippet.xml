@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="estate_website_page.property_cards_template">
-        <t t-if="'is-list-view'">
             <div class="list-view-layout">
                 <div class="row">
                     <t t-foreach="properties" t-as="prop" t-key="prop.id">
@@ -26,30 +25,5 @@
                     </t>
                 </div>
             </div>  
-        </t>
-        <t t-else="'is-card-view'">
-            <div class="card-view-layout">
-                <h3>Available Properties</h3>
-                <div class="row">
-                    <t t-foreach="properties" t-as="prop" t-key="prop.id">
-                        <div class="col-12 col-md-3 mb-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <img class="card-img-top img-fluid"
-                                    t-att-src="'/web/image/estate.property/' + prop.id + '/image'"
-                                    style="height:200px; object-fit:cover;"/>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="fw-bold" t-out="prop.name"/>
-                                    <p class="text-muted small flex-grow-1" t-out="prop.description"/>
-                                    <p class="fw-bold text-primary" t-out="prop.expected_price"/>
-                                    <a t-att-href="'/estate/bid/' + prop.id" class="btn btn-primary w-100 mt-2">
-                                        Bid
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </t>
-                </div>
-            </div>
-        </t>
     </t>
 </templates>
